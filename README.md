@@ -1,4 +1,5 @@
-<img src="assests/laughing-dad.jpg" alt="drawing" width="200"/>[^1] # Laughter is the Best Medicine 
+<img src="assests/laughing-dad.jpg" alt="drawing" width="200"/>[^1] 
+# Laughter is the Best Medicine 
 ***
 ## Description
 A simple web page that generates dad jokes to a user so that they can laugh a lot.
