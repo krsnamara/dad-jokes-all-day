@@ -21,17 +21,16 @@
         }
     };
     
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    });
-    
 
     /// Cache DOM element references
 
     /// Register Event Listners
    
     /// Functions
-
+    
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
 
     /// manually invoke get data
  

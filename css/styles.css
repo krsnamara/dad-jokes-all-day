@@ -1,0 +1,36 @@
+header {
+    color:aliceblue;
+    font-family: 'Berkshire Swash', serif;
+    padding: 0px 0px 0px 0px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 20px 20px 50px white;
+    min-width: 535px;
+}
+h1 {
+    font-size: 60px;
+    -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
+}
+
+.subHeadline {
+    font-size: 30px;
+    -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+
+section {
+    height: 300px;
+    position: relative;
+    border: 3px solid green;
+}
+
+button {
+    margin: 0;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
