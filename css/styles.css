@@ -6,7 +6,8 @@ header {
     text-align: center;
     border-radius: 10%;
     box-shadow: 20px 20px 50px white;
-    min-width: 535px;
+    min-width: auto;
+    max-width: 600px;
 }
 h1 {
     font-size: 60px;
@@ -15,18 +16,21 @@ h1 {
 }
 .subHeadline {
     font-size: 30px;
+    box-shadow: 20px 20px 50px white;
     -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
 }
 main {
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Berkshire Swash', serif;
 }
 section {
     height: 30px;
-    position: center;
-    max-width: 530px;
+    max-width: 600px;
     border: 3px solid aqua;
+    padding: 10px
 }
 
 button {
