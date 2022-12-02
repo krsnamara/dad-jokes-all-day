@@ -13,7 +13,7 @@
     const API_URL = {
         "async": true,
         "crossDomain": true,
-        "url": "https://dad-jokes.p.rapidapi.com/random/joke",
+        "url": "https://dad-jokes.p.rapidapi.com/random/joke/png",
         "method": "GET",
         "headers": {
             "X-RapidAPI-Key": "67fdb2c8f5msh07c8daabd1899a4p11e21djsnf044be486fc5",
@@ -23,9 +23,9 @@
 
 
     //use to generate api object to grab values
-    $.ajax(API_URL).done(function (response) {
-        console.log(response)
-    });
+    // $.ajax(API_URL).done(function (response) {
+    //     console.log(response)
+    // });
 
     /// Cache DOM element references
     const $grabJoke = $('#joke');
