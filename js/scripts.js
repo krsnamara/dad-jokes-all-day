@@ -10,7 +10,7 @@
 
     /// Constants and Variables
 
-    const settings = {
+    const API_URL = {
         "async": true,
         "crossDomain": true,
         "url": "https://dad-jokes.p.rapidapi.com/random/joke/png",
@@ -20,36 +20,71 @@
             "X-RapidAPI-Host": "dad-jokes.p.rapidapi.com"
         }
     };
-    
+
+
+    //use to generate api object to grab values
+    // $.ajax(API_URL).done(function (response) {
+    //     console.log(response)
+    // });
 
     /// Cache DOM element references
+    const $grabJoke = $('#joke');
+    const $punchLine = $('#punchline');
+    const $jokeSection = $('#joke-section');
+    const $punchlineSection = $('#punchline-section')
 
     /// Register Event Listners
-   
+    $grabJoke.on('click', getJoke);
+
+    //second on click for punchline button
+    $punchLine.on('click', getPunchline);
+
+    // testing to on.Click listener
+    // function handleClick() {
+    //     console.log('click');
+    // }
+
+    let joke 
+
     /// Functions
-    
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    });
 
-    /// manually invoke get data
- 
-    /// seprating concerns by putting this function here instead of in the dom above
+    function getJoke() {
+        $.ajax(API_URL)
+        .then(( data ) => {
+            joke = data
+            $jokeSection.text(data.body.setup);
+        }, function(error) {
+            console.log(error);
+        });
+    }
 
+    // second on click doesnt need a second api call 
+    // function getPunchline() {
+    //     $punchlineSection.text(joke.body.punchline);
+    //     }
+    // /// seprating concerns by putting this function here instead of in the dom above
+    // function render(getJokes) {
+    //     const jokeDisplay = getJokes.map(function(jokesObject) {
+    //         return `
+    //         <article data-index="${index}">
+    //             <p>${jokesObject.setup}</p>
+    //         </article>`;
+    //     }).join('');
+
+    //     $jokeSection.html(jokeDisplay);
+    // }
 
     /// Psuedocoe
 
     /*
-    1) select a dom element I can use to insert some quiz cards into
+    1) select a dom element I can use to insert the jokes into
 
-    2) make an ajax request to the api and get some quiz data
+    2) make an ajax request to the api and get joke data 
 
-    3) loop over the list of quiz question objects and generate an html card for each object
+    3) loop over the list of dad joke objects and generate an html output for each joke and punchline object
 
-    4) use the selected dom element to append my quiz cards to the dom
+    4) use the selected dom element to append joke section to the dom
 
     */
 //})
-
-
 
