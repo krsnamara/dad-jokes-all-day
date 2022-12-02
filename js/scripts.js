@@ -21,6 +21,20 @@
         }
     };
 
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://moon-api1.p.rapidapi.com/phase?date-time=2009-07-11-09-30-00&timezone=%2B3&angle-units=deg",
+        "method": "GET",
+        "headers": {
+          "X-RapidAPI-Key": "67fdb2c8f5msh07c8daabd1899a4p11e21djsnf044be486fc5",
+          "X-RapidAPI-Host": "moon-api1.p.rapidapi.com"
+        }
+      };
+      
+      $.ajax(settings).done(function(response) {
+        console.log(response);
+      });
 
     //use to generate api object to grab values
     // $.ajax(API_URL).done(function (response) {
@@ -62,17 +76,6 @@
     function getPunchline() {
         $punchlineSection.text(joke.body.punchline);
         }
-    // /// seprating concerns by putting this function here instead of in the dom above
-    // function render(getJokes) {
-    //     const jokeDisplay = getJokes.map(function(jokesObject) {
-    //         return `
-    //         <article data-index="${index}">
-    //             <p>${jokesObject.setup}</p>
-    //         </article>`;
-    //     }).join('');
-
-    //     $jokeSection.html(jokeDisplay);
-    // }
 
     /// Psuedocoe
 
