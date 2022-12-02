@@ -13,7 +13,7 @@
     const API_URL = {
         "async": true,
         "crossDomain": true,
-        "url": "https://dad-jokes.p.rapidapi.com/random/joke/png",
+        "url": "https://dad-jokes.p.rapidapi.com/random/joke",
         "method": "GET",
         "headers": {
             "X-RapidAPI-Key": "67fdb2c8f5msh07c8daabd1899a4p11e21djsnf044be486fc5",
@@ -23,9 +23,9 @@
 
 
     //use to generate api object to grab values
-    // $.ajax(API_URL).done(function (response) {
-    //     console.log(response)
-    // });
+    $.ajax(API_URL).done(function (response) {
+        console.log(response)
+    });
 
     /// Cache DOM element references
     const $grabJoke = $('#joke');
@@ -40,9 +40,9 @@
     $punchLine.on('click', getPunchline);
 
     // testing to on.Click listener
-    // function handleClick() {
-    //     console.log('click');
-    // }
+    function getJoke() {
+        console.log('click');
+    }
 
     let joke 
 
@@ -59,9 +59,9 @@
     }
 
     // second on click doesnt need a second api call 
-    // function getPunchline() {
-    //     $punchlineSection.text(joke.body.punchline);
-    //     }
+    function getPunchline() {
+        $punchlineSection.text(joke.body.punchline);
+        }
     // /// seprating concerns by putting this function here instead of in the dom above
     // function render(getJokes) {
     //     const jokeDisplay = getJokes.map(function(jokesObject) {
