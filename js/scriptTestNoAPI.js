@@ -10,16 +10,16 @@
 
     /// Constants and Variables
 
-    const API_URL = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://dad-jokes.p.rapidapi.com/random/joke/png",
-        "method": "GET",
-        "headers": {
-            "X-RapidAPI-Key": "67fdb2c8f5msh07c8daabd1899a4p11e21djsnf044be486fc5",
-            "X-RapidAPI-Host": "dad-jokes.p.rapidapi.com"
-        }
-    };
+    // const API_URL = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://dad-jokes.p.rapidapi.com/random/joke/png",
+    //     "method": "GET",
+    //     "headers": {
+    //         "X-RapidAPI-Key": "67fdb2c8f5msh07c8daabd1899a4p11e21djsnf044be486fc5",
+    //         "X-RapidAPI-Host": "dad-jokes.p.rapidapi.com"
+    //     }
+    // };
 
 
     //use to generate api object to grab values
@@ -40,31 +40,19 @@
     $punchLine.on('click', getPunchline);
 
     // testing to on.Click listener
-    // function getJoke() {
-    //     console.log('click');
-    // }
-
-    // function getPunchline() {
-    //     console.log('click punch');
-    // }
-// define let joke to allow access to api on a global scope
-    let joke
+    function getJoke() {
+        console.log('click');
+    }
 
     /// Functions
 
     function getJoke() {
-            $.ajax(API_URL)
-            .then((data)=> {
-                joke = data
-                $jokeSection.text(data.body.setup);
-            }, function(error) {
-                console.log(error, "api")
-            });
+            ($jokeSection).html("What is so great about a boolean?");
     }
 
     // second on click doesnt need a second api call 
     function getPunchline() {
-        $punchlineSection.text(joke.body.punchLine);
+        ($punchlineSection).html("if you use it wrong you're only off by a little bit")
         }
 
     /// Psuedocoe
