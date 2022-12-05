@@ -54,15 +54,16 @@
     $punchLine.on('click', getPunchline);
 
     // testing to on.Click listener
-    function getJoke() {
-        console.log('click');
-    }
+    // function getJoke() {
+    //     console.log('click');
+    // }
 
     let joke 
 
     /// Functions
 
     function getJoke() {
+        $punchlineSection.text('');
         $.ajax(API_URL)
         .then(( data ) => {
             joke = data
