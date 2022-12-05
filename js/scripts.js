@@ -44,18 +44,15 @@
         console.log('click');
     }
 
-    let joke 
-
     /// Functions
 
     function getJoke() {
-            $jokeSection.appendto('What is so great about a boolean?')
-            );
+            ($jokeSection).html("What is so great about a boolean?");
     }
 
     // second on click doesnt need a second api call 
     function getPunchline() {
-        $punchlineSection.apendto("if you use it wrong you're only off by a little bit");
+        ($punchlineSection).html("if you use it wrong you're only off by a little bit")
         }
 
     /// Psuedocoe
