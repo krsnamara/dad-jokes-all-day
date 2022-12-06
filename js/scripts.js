@@ -4,7 +4,7 @@
 
 /// IIFE----> imediatly invoked function expression
 /// add at the end
-//$(function() {
+$(function() {
 
     /// IPO - Input ---> Process ---> Output --->
 
@@ -90,5 +90,5 @@
     4) use the selected dom element to append joke section to the dom
 
     */
-//})
+})
 
