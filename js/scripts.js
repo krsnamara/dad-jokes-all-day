@@ -101,9 +101,6 @@ function leftMeTears() {
         $punchlineSection.text(joke.body.punchline);
         }
 
-
-// Media Query
-
     /// Psuedocoe
 
     /*

@@ -10,7 +10,6 @@ header {
     background-color: aqua;
     text-align: center;
     border-radius: 10%;
-    box-shadow: 20px 20px 50px white;
     min-width: 535px;
 }
 h1 {
@@ -76,3 +75,10 @@ section {
     object-fit: cover;
     overflow: hidden;
 }
+
+/* media query */
+@media only screen and (min-width: 768px) {
+    body {
+        max-width: 430px;
+    }
+  }
