@@ -21,21 +21,6 @@ $(function() {
         }
     };
 
-    const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://moon-api1.p.rapidapi.com/phase?date-time=2009-07-11-09-30-00&timezone=%2B3&angle-units=deg",
-        "method": "GET",
-        "headers": {
-          "X-RapidAPI-Key": "67fdb2c8f5msh07c8daabd1899a4p11e21djsnf044be486fc5",
-          "X-RapidAPI-Host": "moon-api1.p.rapidapi.com"
-        }
-      };
-      
-      $.ajax(settings).done(function(response) {
-        console.log(response);
-      });
-
     //use to generate api object to grab values
     // $.ajax(API_URL).done(function (response) {
     //     console.log(response)
@@ -45,7 +30,15 @@ $(function() {
     const $grabJoke = $('#joke');
     const $punchLine = $('#punchline');
     const $jokeSection = $('#joke-section');
-    const $punchlineSection = $('#punchline-section')
+    const $punchlineSection = $('#punchline-section');
+    //voting section buttons
+    const $burnIt = $('#burn')
+    const $toss = $('#toss-it')
+    const $chuckle = $('#chuckle')
+    const $laughed = $('#laughed-out')
+    const $tears = $('#left-me-in-tears')
+    // media output location for votes
+    const $voteMedia = $('#animation')
 
     /// Register Event Listners
     $grabJoke.on('click', getJoke);
@@ -53,12 +46,42 @@ $(function() {
     //second on click for punchline button
     $punchLine.on('click', getPunchline);
 
+    // listners for voting buttons
+    $burnIt.on('click', burnIt);
+    $toss.on('click', maybeToss);
+    $chuckle.on('click', chuckleWorthy);
+    $laughed.on('click', laughedOutLoud);
+    $tears.on('click', leftMeTears);
+
     // testing to on.Click listener
     // function getJoke() {
     //     console.log('click');
     // }
 
     let joke 
+
+    // on click functions for voting
+function burnIt() {
+    $voteMedia.text('');
+    $voteMedia.append('<img src="https://www.shutterstock.com/image-vector/continuous-line-drawing-red-flame-600w-2072513354.jpg"></img>');
+    }
+
+function maybeToss() {
+    $voteMedia.text('');
+    $voteMedia.append('<img src="https://www.shutterstock.com/image-vector/trash-can-doodle-600w-747594328.jpg"></img>');
+        }
+function chuckleWorthy() {
+    $voteMedia.text('');
+    $voteMedia.append('<img src="https://www.shutterstock.com/image-vector/chuckle-emoji-emoticon-cover-mouth-600w-2070374948.jpg"></img>');
+        }
+function laughedOutLoud() {
+    $voteMedia.text('');
+    $voteMedia.append('<img src="https://www.shutterstock.com/image-vector/trash-can-doodle-600w-747594328.jpg"></img>');
+        }
+function leftMeTears() {
+    $voteMedia.text('');
+    $voteMedia.append('<img src="https://www.shutterstock.com/image-vector/trash-can-doodle-600w-747594328.jpg"></img>');
+        }
 
     /// Functions
 
@@ -77,6 +100,9 @@ $(function() {
     function getPunchline() {
         $punchlineSection.text(joke.body.punchline);
         }
+
+
+// Media Query
 
     /// Psuedocoe
 

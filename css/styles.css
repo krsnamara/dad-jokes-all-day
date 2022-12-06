@@ -24,7 +24,6 @@ h1 {
   -webkit-text-stroke-color: black;
 }
 main {
-    /* display: flex; */
     font-family: 'Berkshire Swash', serif;
 }
 section {
@@ -36,7 +35,7 @@ section {
     border: 3px solid aqua;
 }
 
-button {
+.click {
     min-width: 500px;
     height: 50px;
     background-color: rgb(255, 255, 255, .6);
@@ -46,4 +45,34 @@ button {
 .click:hover {
     color:aliceblue;
     background-color: rgba(41, 37, 249, 0.6);
+}
+
+.rating {
+    display: flex;
+    min-width: 500px;
+}
+
+.score-button {
+    height: fit-content;
+    font-family: 'Berkshire Swash', serif;
+    background-color: rgb(255, 255, 255, .6);
+}
+.score-button:hover {
+    color:aliceblue;
+    background-color: rgba(41, 37, 249, 0.6);
+}
+#vote-media {
+    display: flex;
+}
+#img {
+    height: auto;
+    width: 30px;
+    max-height: ;
+    max-width: 50px;
+}
+#animation {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }

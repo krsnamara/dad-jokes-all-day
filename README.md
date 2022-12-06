@@ -15,10 +15,11 @@ A simple web page that generates dad jokes to a user so that they can laugh a lo
 ![wireframe](assests/wireframe.jpg)
 <br>
 ***
-### Production version image soon to come...
+### Production version
+![wireframe](assests/production-shot.jpg)
 ***
 ## Getting started
-[click here](#) to visit deployed app! (soon to come as well..)
+[click here](https://krsnamara.github.io/dad-jokes-all-day/) to visit deployed app! 
 ***
 ## Future Enhancements
 - Adding a feature that allows users to create accounts to save data
