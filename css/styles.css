@@ -10,16 +10,16 @@ header {
     background-color: aqua;
     text-align: center;
     border-radius: 10%;
-    min-width: 535px;
+    max-width: 300px;
 }
 h1 {
-    font-size: 60px;
+    font-size: 40px;
     -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: black;
 }
 .subHeadline {
-    font-size: 30px;
-    -webkit-text-stroke-width: 1.5px;
+    font-size: 20px;
+    -webkit-text-stroke-width: 0.75px;
   -webkit-text-stroke-color: black;
 }
 main {
@@ -27,15 +27,15 @@ main {
 }
 section {
     height: auto;
-    min-height: 30px;
+    min-height: 20px;
     padding: 5%;
     position: center;
-    max-width: 500px;
+    max-width: 300x;
     border: 3px solid aqua;
 }
 
 .click {
-    min-width: 500px;
+    min-width: 300px;
     height: 50px;
     background-color: rgb(255, 255, 255, .6);
     font-family: 'Berkshire Swash', serif;
@@ -48,7 +48,7 @@ section {
 
 .rating {
     display: flex;
-    min-width: 500px;
+    min-width: 400px;
 }
 
 .score-button {
