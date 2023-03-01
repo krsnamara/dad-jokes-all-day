@@ -32,7 +32,7 @@ h1 {
 main {
     font-family: 'Berkshire Swash', serif;
 }
-div {
+#joke-section, #punchline-section {
     height: auto;
     min-height: 20px;
     padding: 5%;
