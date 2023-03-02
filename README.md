@@ -16,7 +16,7 @@ A simple web page that generates dad jokes to a user so that they can laugh a lo
 <br>
 ***
 ### Production version
-![wireframe](assests/production-shot.jpg)
+![wireframe](assests/production.png)
 ***
 ## Deployed Website
 [get ready to laugh...](https://krsnamara.github.io/dad-jokes-all-day/) to visit deployed app! 
